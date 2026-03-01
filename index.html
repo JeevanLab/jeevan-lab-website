@@ -3,12 +3,16 @@
 <head>
   <title>JEEVAN HI TECH LABORATORY | Mundathikode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Link External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<!-- TOP CONTACT BAR -->
+<div class="top-bar">
+  📞 <a href="tel:+917356397936">+91 73563 97936</a> |
+  📧 <a href="mailto:labjeevan34@gmail.com">labjeevan34@gmail.com</a>
+</div>
 
 <header>
   <h2>JEEVAN HI TECH LABORATORY</h2>
@@ -17,10 +21,11 @@
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
     <a href="https://wa.me/917356397936" target="_blank">WhatsApp</a>
-    <a href="https://instagram.com/yourpage" target="_blank">Instagram</a>
+    <a href="https://www.instagram.com/jeevanhitechlab/" target="_blank">Instagram</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="overlay">
     <div class="hero-content">
@@ -33,9 +38,9 @@
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="section">
   <h2>Our Diagnostic Services & Health Packages</h2>
-
   <div class="cards">
     <div class="card">🫀 Cardiac Profile</div>
     <div class="card">🦴 Arthritis Profile</div>
@@ -52,26 +57,43 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Book Appointment</h2>
 
-  <form action="https://formsubmit.co/labjeevan34@gmail.com" method="POST">
-    <input type="text" name="Name" placeholder="Your Name" required>
-    <input type="tel" name="Phone" placeholder="Phone Number" required>
-    <input type="date" name="Appointment Date" required>
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <input type="date" id="date" required>
 
-    <input type="hidden" name="_subject" value="New Appointment - Jeevan Lab">
-    <input type="hidden" name="_captcha" value="false">
-
-    <button class="btn" type="submit">Book Appointment</button>
+    <button class="btn" type="submit">Book via WhatsApp</button>
   </form>
 </section>
 
 <footer>
-  © 2026 JEEVAN HI TECH LABORATORY | Mundathikode
+  <p>📞 +91 73563 97936 | 📧 labjeevan34@gmail.com</p>
+  <p>© 2026 JEEVAN HI TECH LABORATORY | Mundathikode</p>
 </footer>
 
 <a href="https://wa.me/917356397936" class="whatsapp-float" target="_blank">💬</a>
+
+<!-- WHATSAPP SCRIPT -->
+<script>
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var date = document.getElementById("date").value;
+
+    var message = "New Appointment Request:%0A"
+        + "Name: " + name + "%0A"
+        + "Phone: " + phone + "%0A"
+        + "Preferred Date: " + date;
+
+    var whatsappURL = "https://wa.me/917356397936?text=" + message;
+
+    window.open(whatsappURL, "_blank");
+}
+</script>
 
 </body>
 </html>
