@@ -1,7 +1,27 @@
+/* GENERAL */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f6f8;
+}
+
+/* TOP CONTACT BAR */
+.top-bar {
+  background: #08304d;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-bar a:hover {
+  text-decoration: underline;
 }
 
 /* HEADER */
@@ -10,6 +30,10 @@ header {
   padding: 15px;
   color: white;
   text-align: center;
+}
+
+nav {
+  margin-top: 10px;
 }
 
 nav a {
@@ -23,51 +47,55 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* HERO SECTION */
+/* HERO SECTION WITH BANNER */
 .hero {
   position: relative;
-  height: 70vh;
-  background: url("images/banner.jpg") no-repeat center;
+  height: 75vh;
+  background: url("images/jeevan.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* WHITE OPACITY LAYER */
 .overlay {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(255, 255, 255, 0.80); 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* HERO TEXT */
 .hero-content {
-  color: white;
   text-align: center;
-  max-width: 700px;
+  max-width: 750px;
   padding: 20px;
+  color: #0a3d62;
 }
 
 .hero-content h1 {
-  font-size: 36px;
+  font-size: 38px;
+  margin-bottom: 10px;
 }
 
 .hero-content p {
   font-size: 18px;
+  margin-bottom: 20px;
 }
 
 /* BUTTON */
 .btn {
   background: #25D366;
-  padding: 12px 20px;
+  padding: 12px 22px;
   color: white;
   border: none;
   cursor: pointer;
   font-size: 16px;
-  border-radius: 5px;
-  margin-top: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -76,14 +104,14 @@ nav a:hover {
 
 /* SECTION */
 .section {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
-/* SERVICES */
+/* SERVICES GRID */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 25px;
   padding: 40px;
 }
@@ -98,8 +126,8 @@ nav a:hover {
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .highlight {
@@ -113,10 +141,10 @@ form {
 }
 
 form input {
-  padding: 10px;
+  padding: 12px;
   margin: 10px;
-  width: 250px;
-  border-radius: 5px;
+  width: 260px;
+  border-radius: 6px;
   border: 1px solid #ccc;
 }
 
@@ -124,11 +152,11 @@ form input {
 footer {
   background: #0a3d62;
   color: white;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
 }
 
-/* FLOATING WHATSAPP */
+/* FLOATING WHATSAPP BUTTON */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -139,4 +167,25 @@ footer {
   font-size: 22px;
   text-decoration: none;
   color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  form input {
+    width: 90%;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
 }
