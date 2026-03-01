@@ -1,84 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JEEVAN HIGHTECH LABORATORY | Mundathikode</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>JEEVAN HI TECH LABORATORY | Mundathikode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
+
+    header {
+      background: #0a3d62;
+      padding: 15px;
+      color: white;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      position: relative;
+      height: 70vh;
+      background: url("images/banner.jpg") no-repeat center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-content {
+      color: white;
+      text-align: center;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .btn {
+      background: #25D366;
+      padding: 12px 20px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+    }
+
+    .highlight {
+      background: #f0f7ff;
+      border-left: 5px solid #0a3d62;
+    }
+
+    form input {
+      padding: 10px;
+      margin: 10px;
+      width: 250px;
+    }
+
+    footer {
+      background: #0a3d62;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 22px;
+      text-decoration: none;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- Top Bar -->
-<div class="top-bar">
-    📞 +91-XXXXXXXXXX | 🕒 Mon-Sat: 7AM - 8PM
-</div>
-
-<!-- Header -->
 <header>
-    <div class="logo">JEEVAN HIGHTECH LABORATORY</div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact">Contact</a>
-    </nav>
+  <h2>JEEVAN HI TECH LABORATORY</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="https://wa.me/917356397936" target="_blank">WhatsApp</a>
+    <a href="https://instagram.com/yourpage" target="_blank">Instagram</a>
+  </nav>
 </header>
 
-<!-- Hero Section -->
-<section class="hero" id="home">
+<section class="hero">
+  <div class="overlay">
     <div class="hero-content">
-        <h1>Advanced Diagnostic Excellence</h1>
-        <p>Precision Testing | Trusted Care | Modern Technology</p>
-        <a href="#contact" class="btn">Book Appointment</a>
+      <h1>Advanced Diagnostic Excellence</h1>
+      <p>Trusted Care | Accurate Reports | Modern Technology</p>
+      <a href="https://wa.me/917356397936" target="_blank">
+        <button class="btn">Chat on WhatsApp</button>
+      </a>
     </div>
+  </div>
 </section>
 
-<!-- Services -->
 <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="cards">
-        <div class="card">🧪 Blood Tests</div>
-        <div class="card">💉 Diabetes Testing</div>
-        <div class="card">🧬 Thyroid Profile</div>
-        <div class="card">🧫 Full Body Checkup</div>
-        <div class="card">🧪 Hormone Tests</div>
-        <div class="card">🔬 Advanced Diagnostics</div>
-    </div>
+  <h2>Our Diagnostic Services & Health Packages</h2>
+
+  <div class="cards">
+    <div class="card">🫀 Cardiac Profile</div>
+    <div class="card">🦴 Arthritis Profile</div>
+    <div class="card">🧬 Cancer Profile</div>
+    <div class="card">👶 Infertility Profile</div>
+    <div class="card">👩 Gynecology Profile Test</div>
+
+    <div class="card highlight">🥉 Silver Health Package</div>
+    <div class="card highlight">🥈 Golden Health Package</div>
+    <div class="card highlight">🥇 Platinum Health Package</div>
+    <div class="card highlight">👨 Basic Health Package - Men</div>
+    <div class="card highlight">👩 Basic Health Package - Women</div>
+    <div class="card highlight">🔬 Master Body Profile</div>
+  </div>
 </section>
 
-<!-- Why Choose Us -->
-<section id="why" class="section light">
-    <h2>Why Choose Us?</h2>
-    <ul class="why-list">
-        <li>✔ NABL Standard Quality</li>
-        <li>✔ Experienced Lab Technicians</li>
-        <li>✔ Fast & Accurate Reports</li>
-        <li>✔ Affordable Pricing</li>
-        <li>✔ Modern Equipment</li>
-    </ul>
-</section>
-
-<!-- Contact -->
 <section id="contact" class="section">
-    <h2>Book an Appointment</h2>
-    <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="date" required>
-        <button type="submit">Submit</button>
-    </form>
-    <p>📍 Mundathikode</p>
+  <h2>Book Appointment</h2>
+
+  <form action="https://formsubmit.co/labjeevan34@gmail.com" method="POST">
+    <input type="text" name="Name" placeholder="Your Name" required><br>
+    <input type="tel" name="Phone" placeholder="Phone Number" required><br>
+    <input type="date" name="Appointment Date" required><br>
+
+    <input type="hidden" name="_subject" value="New Appointment - Jeevan Lab">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button class="btn" type="submit">Book Appointment</button>
+  </form>
 </section>
 
-<!-- Footer -->
 <footer>
-    © 2026 JEEVAN HIGHTECH LABORATORY | All Rights Reserved
+  © 2026 JEEVAN HI TECH LABORATORY | Mundathikode
 </footer>
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬</a>
+<a href="https://wa.me/917356397936" class="whatsapp-float" target="_blank">💬</a>
 
 </body>
 </html>
